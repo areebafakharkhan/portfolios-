@@ -1,0 +1,1249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Areeba Fakhar Khan — HR Professional</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #1a1714;
+        --ink-mid: #3d3a35;
+        --ink-soft: #7a7669;
+        --ink-faint: #bfbcb4;
+        --paper: #faf8f4;
+        --paper-warm: #f3efe8;
+        --paper-card: #ffffff;
+        --accent: #9b5e3c;
+        --accent-light: #e8d5c8;
+        --accent-pale: #f7f0ea;
+        --teal: #2a6b5e;
+        --teal-light: #d1ede8;
+        --rule: rgba(26, 23, 20, 0.1);
+        --transition: cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --ink: #f0ece4;
+          --ink-mid: #c8c3b8;
+          --ink-soft: #8c8880;
+          --ink-faint: #4a4742;
+          --paper: #141210;
+          --paper-warm: #1c1a17;
+          --paper-card: #1f1d1a;
+          --accent: #d4896a;
+          --accent-light: #3d2618;
+          --accent-pale: #261a12;
+          --teal: #4da897;
+          --teal-light: #0d2e29;
+          --rule: rgba(240, 236, 228, 0.1);
+        }
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Inter", system-ui, sans-serif;
+        background: var(--paper);
+        color: var(--ink);
+        font-size: 16px;
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+      }
+      .serif {
+        font-family: "DM Serif Display", Georgia, serif;
+      }
+
+      /* NAV */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        background: var(--paper);
+        border-bottom: 1px solid var(--rule);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 clamp(1.5rem, 5vw, 4rem);
+        height: 60px;
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+      }
+      .nav-logo {
+        font-family: "DM Serif Display", serif;
+        font-size: 1.1rem;
+        color: var(--ink);
+        text-decoration: none;
+        letter-spacing: 0.01em;
+      }
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+      }
+      .nav-links a {
+        font-size: 0.8rem;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--ink-soft);
+        text-decoration: none;
+        transition: color 0.2s var(--transition);
+      }
+      .nav-links a:hover {
+        color: var(--accent);
+      }
+      .nav-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--paper-card);
+        background: var(--accent);
+        padding: 8px 18px;
+        border-radius: 3px;
+        text-decoration: none;
+        transition:
+          background 0.2s var(--transition),
+          transform 0.15s;
+      }
+      .nav-cta:hover {
+        background: var(--ink);
+        transform: translateY(-1px);
+      }
+
+      /* SECTIONS */
+      section {
+        padding: 7rem clamp(1.5rem, 8vw, 10rem);
+      }
+      .section-label {
+        font-size: 0.75rem;
+        font-weight: 500;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 0.5rem;
+        display: block;
+      }
+
+      /* HERO */
+      #hero {
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 4rem;
+        padding-top: calc(60px + 4rem);
+        background: var(--paper);
+      }
+      .hero-text h1 {
+        font-family: "DM Serif Display", serif;
+        font-size: clamp(2.8rem, 5vw, 4.2rem);
+        line-height: 1.1;
+        color: var(--ink);
+        margin-bottom: 1.5rem;
+      }
+      .hero-text h1 em {
+        color: var(--accent);
+        font-style: italic;
+      }
+      .hero-subhead {
+        font-size: 1.05rem;
+        color: var(--ink-mid);
+        max-width: 480px;
+        line-height: 1.8;
+        margin-bottom: 2.5rem;
+      }
+      .hero-actions {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+      .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--accent);
+        color: #fff;
+        padding: 13px 26px;
+        border-radius: 3px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        text-decoration: none;
+        transition: all 0.2s var(--transition);
+      }
+      .btn-primary:hover {
+        background: var(--ink);
+        transform: translateY(-2px);
+      }
+      .btn-outline {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        border: 1px solid var(--ink-faint);
+        color: var(--ink-mid);
+        padding: 12px 24px;
+        border-radius: 3px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        text-decoration: none;
+        transition: all 0.2s var(--transition);
+      }
+      .btn-outline:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+        transform: translateY(-2px);
+      }
+      .hero-visual {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        position: relative;
+      }
+      .hero-stat-card {
+        background: var(--paper-card);
+        border: 1px solid var(--rule);
+        border-radius: 10px;
+        padding: 1.5rem 1.75rem;
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+      }
+      .hero-stat-card:nth-child(2) {
+        margin-left: 3rem;
+      }
+      .hero-stat-card:nth-child(3) {
+        margin-left: 1.5rem;
+      }
+      .stat-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-size: 1.4rem;
+      }
+      .stat-icon.terracotta {
+        background: var(--accent-pale);
+      }
+      .stat-icon.teal {
+        background: var(--teal-light);
+      }
+      .stat-icon.warm {
+        background: var(--paper-warm);
+      }
+      .stat-body .label {
+        font-size: 0.75rem;
+        color: var(--ink-soft);
+        font-weight: 500;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+      .stat-body .value {
+        font-size: 0.95rem;
+        color: var(--ink);
+        font-weight: 500;
+        margin-top: 2px;
+      }
+
+      /* ABOUT */
+      #about {
+        background: var(--paper-warm);
+        border-top: 1px solid var(--rule);
+        border-bottom: 1px solid var(--rule);
+      }
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 6rem;
+        align-items: start;
+      }
+      .about-body p {
+        color: var(--ink-mid);
+        font-size: 1.05rem;
+        line-height: 1.9;
+        margin-bottom: 1.25rem;
+      }
+      .about-body p:first-of-type {
+        color: var(--ink);
+        font-size: 1.15rem;
+      }
+      .about-details {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+      .detail-item {
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+      }
+      .detail-icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 6px;
+        background: var(--accent-pale);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-size: 1rem;
+      }
+      .detail-label {
+        font-size: 0.8rem;
+        font-weight: 500;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--ink-soft);
+      }
+      .detail-value {
+        font-size: 0.95rem;
+        color: var(--ink-mid);
+        margin-top: 2px;
+      }
+      .about-heading {
+        font-family: "DM Serif Display", serif;
+        font-size: clamp(2rem, 3.5vw, 2.8rem);
+        line-height: 1.2;
+        color: var(--ink);
+        margin-bottom: 1.75rem;
+      }
+
+      /* SKILLS */
+      #skills {
+        background: var(--paper);
+      }
+      .skills-heading {
+        font-family: "DM Serif Display", serif;
+        font-size: clamp(2rem, 3.5vw, 2.8rem);
+        line-height: 1.2;
+        color: var(--ink);
+        margin-bottom: 3rem;
+      }
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1.5rem;
+      }
+      .skill-group {
+        background: var(--paper-card);
+        border: 1px solid var(--rule);
+        border-radius: 10px;
+        padding: 1.75rem;
+        transition:
+          transform 0.2s var(--transition),
+          box-shadow 0.2s var(--transition);
+      }
+      .skill-group:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+      }
+      .skill-group-title {
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 1.25rem;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .skill-group-title .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--accent);
+        display: inline-block;
+      }
+      .skill-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .skill-tag {
+        font-size: 0.82rem;
+        font-weight: 500;
+        color: var(--ink-mid);
+        background: var(--paper-warm);
+        border: 1px solid var(--rule);
+        padding: 5px 12px;
+        border-radius: 100px;
+        transition: all 0.15s;
+      }
+      .skill-tag:hover {
+        background: var(--accent-light);
+        color: var(--accent);
+        border-color: var(--accent-light);
+      }
+
+      /* EXPERIENCE */
+      #experience {
+        background: var(--paper-warm);
+        border-top: 1px solid var(--rule);
+      }
+      .exp-heading {
+        font-family: "DM Serif Display", serif;
+        font-size: clamp(2rem, 3.5vw, 2.8rem);
+        line-height: 1.2;
+        color: var(--ink);
+        margin-bottom: 3.5rem;
+      }
+      .timeline {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        position: relative;
+      }
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 14px;
+        top: 8px;
+        width: 1px;
+        height: calc(100% - 16px);
+        background: var(--rule);
+      }
+      .timeline-item {
+        display: grid;
+        grid-template-columns: 40px 1fr;
+        gap: 1.5rem;
+        padding-bottom: 3rem;
+        position: relative;
+      }
+      .timeline-item:last-child {
+        padding-bottom: 0;
+      }
+      .timeline-dot {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: var(--paper-card);
+        border: 2px solid var(--accent);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+      .timeline-dot-inner {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--accent);
+      }
+      .timeline-dot.alt {
+        border-color: var(--teal);
+      }
+      .timeline-dot.alt .timeline-dot-inner {
+        background: var(--teal);
+      }
+      .timeline-body {
+        padding-top: 2px;
+      }
+      .timeline-title {
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: var(--ink);
+        line-height: 1.3;
+      }
+      .timeline-org {
+        font-size: 0.9rem;
+        color: var(--accent);
+        font-weight: 500;
+        margin: 3px 0;
+      }
+      .timeline-meta {
+        font-size: 0.8rem;
+        color: var(--ink-soft);
+        margin-bottom: 0.75rem;
+        letter-spacing: 0.03em;
+      }
+      .timeline-desc {
+        font-size: 0.92rem;
+        color: var(--ink-mid);
+        line-height: 1.75;
+      }
+
+      /* EDUCATION */
+      #education {
+        background: var(--paper);
+        border-top: 1px solid var(--rule);
+      }
+      .edu-heading {
+        font-family: "DM Serif Display", serif;
+        font-size: clamp(2rem, 3.5vw, 2.8rem);
+        line-height: 1.2;
+        color: var(--ink);
+        margin-bottom: 3rem;
+      }
+      .edu-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+      }
+      .edu-card {
+        background: var(--paper-card);
+        border: 1px solid var(--rule);
+        border-radius: 10px;
+        padding: 1.75rem;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.2s var(--transition);
+      }
+      .edu-card:hover {
+        transform: translateY(-3px);
+      }
+      .edu-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: var(--accent);
+      }
+      .edu-card.alt::before {
+        background: var(--teal);
+      }
+      .edu-degree {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--ink);
+        line-height: 1.4;
+        margin-bottom: 6px;
+      }
+      .edu-spec {
+        font-size: 0.85rem;
+        color: var(--accent);
+        font-weight: 500;
+        margin-bottom: 8px;
+      }
+      .edu-uni {
+        font-size: 0.88rem;
+        color: var(--ink-mid);
+      }
+      .edu-year {
+        display: inline-block;
+        margin-top: 1rem;
+        font-size: 0.78rem;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        color: var(--ink-soft);
+        text-transform: uppercase;
+      }
+
+      /* CERTIFICATIONS */
+      #certifications {
+        background: var(--paper-warm);
+        border-top: 1px solid var(--rule);
+      }
+      .cert-heading {
+        font-family: "DM Serif Display", serif;
+        font-size: clamp(2rem, 3.5vw, 2.8rem);
+        line-height: 1.2;
+        color: var(--ink);
+        margin-bottom: 3rem;
+      }
+      .cert-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1rem;
+      }
+      .cert-item {
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+        padding: 1.25rem 1.5rem;
+        background: var(--paper-card);
+        border: 1px solid var(--rule);
+        border-radius: 8px;
+        transition:
+          transform 0.2s var(--transition),
+          border-color 0.2s;
+      }
+      .cert-item:hover {
+        transform: translateY(-2px);
+        border-color: var(--accent-light);
+      }
+      .cert-icon {
+        width: 38px;
+        height: 38px;
+        border-radius: 7px;
+        background: var(--accent-pale);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-size: 1.1rem;
+      }
+      .cert-name {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--ink);
+        line-height: 1.4;
+      }
+      .cert-issuer {
+        font-size: 0.8rem;
+        color: var(--ink-soft);
+        margin-top: 3px;
+      }
+
+      /* ACHIEVEMENTS */
+      #achievements {
+        background: var(--paper);
+        border-top: 1px solid var(--rule);
+      }
+      .ach-heading {
+        font-family: "DM Serif Display", serif;
+        font-size: clamp(2rem, 3.5vw, 2.8rem);
+        line-height: 1.2;
+        color: var(--ink);
+        margin-bottom: 3rem;
+      }
+      .ach-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .ach-item {
+        padding: 1.25rem 1.5rem;
+        border-left: 3px solid var(--accent);
+        background: var(--paper-card);
+        border-radius: 0 8px 8px 0;
+        border-top: 1px solid var(--rule);
+        border-right: 1px solid var(--rule);
+        border-bottom: 1px solid var(--rule);
+      }
+      .ach-title {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: var(--ink);
+        margin-bottom: 4px;
+      }
+      .ach-detail {
+        font-size: 0.87rem;
+        color: var(--ink-soft);
+      }
+
+      /* CONTACT */
+      #contact {
+        background: var(--ink);
+        color: var(--paper);
+        border-top: none;
+        text-align: center;
+      }
+      #contact .section-label {
+        color: var(--accent);
+      }
+      .contact-heading {
+        font-family: "DM Serif Display", serif;
+        font-size: clamp(2.2rem, 4vw, 3.4rem);
+        line-height: 1.15;
+        color: var(--paper);
+        margin-bottom: 1rem;
+      }
+      .contact-sub {
+        font-size: 1rem;
+        color: var(--ink-faint);
+        max-width: 500px;
+        margin: 0 auto 3rem;
+        line-height: 1.8;
+      }
+      .contact-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+        margin-bottom: 3rem;
+      }
+      .contact-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 13px 24px;
+        border-radius: 4px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        letter-spacing: 0.03em;
+        text-decoration: none;
+        transition: all 0.2s var(--transition);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        color: var(--paper);
+      }
+      .contact-link:hover {
+        background: rgba(255, 255, 255, 0.07);
+        border-color: rgba(255, 255, 255, 0.3);
+        transform: translateY(-2px);
+      }
+      .contact-link.primary {
+        background: var(--accent);
+        border-color: var(--accent);
+      }
+      .contact-link.primary:hover {
+        background: #c07050;
+        border-color: #c07050;
+      }
+      .contact-icon {
+        font-size: 1.1rem;
+      }
+      .footer-note {
+        font-size: 0.8rem;
+        color: var(--ink-soft);
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        padding-top: 2rem;
+        margin-top: 1rem;
+      }
+
+      /* SCROLL REVEAL */
+      .reveal {
+        opacity: 0;
+        transform: translateY(22px);
+        transition:
+          opacity 0.6s var(--transition),
+          transform 0.6s var(--transition);
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .reveal-delay-1 {
+        transition-delay: 0.1s;
+      }
+      .reveal-delay-2 {
+        transition-delay: 0.2s;
+      }
+      .reveal-delay-3 {
+        transition-delay: 0.3s;
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 900px) {
+        #hero {
+          grid-template-columns: 1fr;
+          padding-bottom: 4rem;
+        }
+        .about-grid {
+          grid-template-columns: 1fr;
+          gap: 3rem;
+        }
+        .hero-visual {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 1rem;
+        }
+        .hero-stat-card:nth-child(2),
+        .hero-stat-card:nth-child(3) {
+          margin-left: 0;
+        }
+        .nav-links {
+          display: none;
+        }
+      }
+      @media (max-width: 600px) {
+        nav {
+          padding: 0 1.25rem;
+        }
+        section {
+          padding: 5rem 1.5rem;
+        }
+        #hero {
+          padding: calc(60px + 2rem) 1.5rem 3rem;
+        }
+        .hero-visual {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav>
+      <a href="#hero" class="nav-logo">Areeba Fakhar Khan</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="mailto:areebak1920@gmail.com" class="nav-cta">Get in touch →</a>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-text">
+        <span class="section-label">Available for HR roles</span>
+        <h1>
+          People-first<br />HR <em>professional</em><br />&amp; MBA graduate
+        </h1>
+        <p class="hero-subhead">
+          I help organisations attract, onboard, and retain great talent.
+          Specialising in HR operations, employee engagement, and talent
+          acquisition — with hands-on experience across recruitment, customer
+          operations, and people management.
+        </p>
+        <div class="hero-actions">
+          <a href="#experience" class="btn-primary">View my experience →</a>
+          <a href="#contact" class="btn-outline">Let's connect</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-stat-card reveal">
+          <div class="stat-icon terracotta">🎓</div>
+          <div class="stat-body">
+            <div class="label">Education</div>
+            <div class="value">MBA — HR &amp; Marketing</div>
+          </div>
+        </div>
+        <div class="hero-stat-card reveal reveal-delay-1">
+          <div class="stat-icon teal">💼</div>
+          <div class="stat-body">
+            <div class="label">Experience</div>
+            <div class="value">5 roles across HR &amp; operations</div>
+          </div>
+        </div>
+        <div class="hero-stat-card reveal reveal-delay-2">
+          <div class="stat-icon warm">📜</div>
+          <div class="stat-body">
+            <div class="label">Certifications</div>
+            <div class="value">NISM + 4 professional certs</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="about-grid">
+        <div class="about-body reveal">
+          <span class="section-label">About me</span>
+          <h2 class="about-heading">
+            I believe the best workplaces are built on strong HR foundations
+          </h2>
+          <p>
+            I'm Areeba — an MBA graduate specialising in Human Resources and
+            Marketing, with practical experience spanning recruitment,
+            onboarding, employee engagement, and customer operations. I've
+            worked across both non-profit and corporate environments, which
+            gives me a grounded perspective on people and process.
+          </p>
+          <p>
+            Whether I'm screening candidates, supporting onboarding workflows,
+            or managing customer queries at scale, I bring accuracy, empathy,
+            and a genuine commitment to getting it right. I'm a quick learner
+            who adapts easily to new tools, teams, and contexts.
+          </p>
+          <p>
+            Currently based in Noida, U.P., I'm actively seeking HR roles where
+            I can apply my blend of strategic HR thinking and operational
+            execution to help teams grow and thrive.
+          </p>
+        </div>
+        <div class="about-details reveal reveal-delay-1">
+          <div class="detail-item">
+            <div class="detail-icon">📍</div>
+            <div>
+              <div class="detail-label">Location</div>
+              <div class="detail-value">Noida, Uttar Pradesh</div>
+            </div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-icon">📧</div>
+            <div>
+              <div class="detail-label">Email</div>
+              <div class="detail-value">
+                <a
+                  href="mailto:areebak1920@gmail.com"
+                  style="color: var(--accent); text-decoration: none"
+                  >areebak1920@gmail.com</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-icon">📞</div>
+            <div>
+              <div class="detail-label">Phone</div>
+              <div class="detail-value">
+                <a
+                  href="tel:+917348470827"
+                  style="color: var(--ink-mid); text-decoration: none"
+                  >+91 73484 70827</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-icon">🎓</div>
+            <div>
+              <div class="detail-label">Qualification</div>
+              <div class="detail-value">
+                MBA — Dr. A.P.J. Abdul Kalam Technical University
+              </div>
+            </div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-icon">🌐</div>
+            <div>
+              <div class="detail-label">Languages</div>
+              <div class="detail-value">English, Hindi</div>
+            </div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-icon">💡</div>
+            <div>
+              <div class="detail-label">Open to</div>
+              <div class="detail-value">
+                HR Executive, HR Generalist, Talent Acquisition, People
+                Operations
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <span class="section-label reveal">Core competencies</span>
+      <h2 class="skills-heading reveal">What I bring to the table</h2>
+      <div class="skills-grid">
+        <div class="skill-group reveal">
+          <div class="skill-group-title">
+            <span class="dot"></span>HR &amp; People
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Talent Acquisition</span>
+            <span class="skill-tag">Recruitment</span>
+            <span class="skill-tag">Onboarding</span>
+            <span class="skill-tag">Employee Engagement</span>
+            <span class="skill-tag">HR Operations</span>
+            <span class="skill-tag">Talent Management</span>
+          </div>
+        </div>
+        <div class="skill-group reveal reveal-delay-1">
+          <div class="skill-group-title">
+            <span class="dot"></span>Communication
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Interpersonal Skills</span>
+            <span class="skill-tag">Voice Support</span>
+            <span class="skill-tag">Chat Support</span>
+            <span class="skill-tag">Email Communication</span>
+            <span class="skill-tag">Customer Handling</span>
+          </div>
+        </div>
+        <div class="skill-group reveal reveal-delay-2">
+          <div class="skill-group-title">
+            <span class="dot"></span>Tools &amp; Tech
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">MS Excel</span>
+            <span class="skill-tag">MS Word</span>
+            <span class="skill-tag">PowerPoint</span>
+            <span class="skill-tag">MS Office Suite</span>
+            <span class="skill-tag">AI Tools (Generative)</span>
+          </div>
+        </div>
+        <div class="skill-group reveal reveal-delay-3">
+          <div class="skill-group-title">
+            <span class="dot"></span>Soft Skills
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Problem Solving</span>
+            <span class="skill-tag">Time Management</span>
+            <span class="skill-tag">Adaptability</span>
+            <span class="skill-tag">Teamwork</span>
+            <span class="skill-tag">Attention to Detail</span>
+            <span class="skill-tag">Work Culture Building</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <div class="skill-group-title">
+            <span class="dot"></span>Finance &amp; Business
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Mutual Funds</span>
+            <span class="skill-tag">Project Management</span>
+            <span class="skill-tag">Marketing</span>
+            <span class="skill-tag">Crowdfunding</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <span class="section-label reveal">Work history</span>
+      <h2 class="exp-heading reveal">Professional experience</h2>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">
+            <div class="timeline-dot-inner"></div>
+          </div>
+          <div class="timeline-body">
+            <div class="timeline-title">HR &amp; IT Recruitment Intern</div>
+            <div class="timeline-org">Risebird</div>
+            <div class="timeline-meta">Recent · Internship</div>
+            <p class="timeline-desc">
+              Managed end-to-end recruitment processes for IT and HR roles.
+              Sourced candidates, coordinated interviews, and supported talent
+              pipeline management to ensure efficient hiring outcomes.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">
+            <div class="timeline-dot-inner"></div>
+          </div>
+          <div class="timeline-body">
+            <div class="timeline-title">Executive Operations</div>
+            <div class="timeline-org">Startek Pvt. Ltd</div>
+            <div class="timeline-meta">Feb 2026 – May 2026 · Full-time</div>
+            <p class="timeline-desc">
+              Delivered front-line operations support, handling customer
+              interactions and escalations with accuracy and professionalism.
+              Maintained service-level standards while managing complex queries
+              across multiple channels.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot">
+            <div class="timeline-dot-inner"></div>
+          </div>
+          <div class="timeline-body">
+            <div class="timeline-title">Customer Care Executive</div>
+            <div class="timeline-org">Cyfuture India Pvt. Ltd</div>
+            <div class="timeline-meta">Aug 2025 – Dec 2025 · Full-time</div>
+            <p class="timeline-desc">
+              Managed high-volume customer interactions via voice, chat, and
+              email, resolving issues efficiently while maintaining high
+              satisfaction rates. Developed strong processes for issue
+              documentation and follow-up.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot alt">
+            <div class="timeline-dot-inner"></div>
+          </div>
+          <div class="timeline-body">
+            <div class="timeline-title">Human Resources Intern</div>
+            <div class="timeline-org">Corizo</div>
+            <div class="timeline-meta">2024 · 1 month · Internship</div>
+            <p class="timeline-desc">
+              Supported core HR functions including recruitment coordination,
+              candidate screening, and onboarding process management. Gained
+              direct exposure to HR operations and people management workflows
+              in a fast-paced environment.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot alt">
+            <div class="timeline-dot-inner"></div>
+          </div>
+          <div class="timeline-body">
+            <div class="timeline-title">Crowdfunding Intern</div>
+            <div class="timeline-org">Muskurahat Foundation</div>
+            <div class="timeline-meta">2024 · 1 month · NGO/Non-profit</div>
+            <p class="timeline-desc">
+              Contributed to fundraising and outreach campaigns for a non-profit
+              organisation focused on social impact. Developed communication
+              materials and engaged stakeholders to support campaign goals.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <span class="section-label reveal">Academic background</span>
+      <h2 class="edu-heading reveal">Education</h2>
+      <div class="edu-grid">
+        <div class="edu-card reveal">
+          <div class="edu-degree">Master of Business Administration (MBA)</div>
+          <div class="edu-spec">
+            Specialisation: Human Resources &amp; Marketing
+          </div>
+          <div class="edu-uni">
+            Dr. A.P.J. Abdul Kalam Technical University, Lucknow
+          </div>
+          <span class="edu-year">2023 – 2025</span>
+        </div>
+        <div class="edu-card alt reveal reveal-delay-1">
+          <div class="edu-degree">Bachelor of Arts (B.A.)</div>
+          <div class="edu-spec">Graduate Degree</div>
+          <div class="edu-uni">C.S.J.M. University, Kanpur</div>
+          <span class="edu-year">2018 – 2021</span>
+        </div>
+        <div class="edu-card alt reveal reveal-delay-2">
+          <div class="edu-degree">Higher Secondary Certificate (Class 12)</div>
+          <div class="edu-spec">U.P. Board</div>
+          <div class="edu-uni">Uttar Pradesh Board of Secondary Education</div>
+          <span class="edu-year">2018</span>
+        </div>
+        <div class="edu-card reveal reveal-delay-3">
+          <div class="edu-degree">Secondary School Certificate (Class 10)</div>
+          <div class="edu-spec">U.P. Board</div>
+          <div class="edu-uni">Uttar Pradesh Board of Secondary Education</div>
+          <span class="edu-year">2016</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications">
+      <span class="section-label reveal">Professional development</span>
+      <h2 class="cert-heading reveal">Certifications</h2>
+      <div class="cert-list">
+        <div class="cert-item reveal">
+          <div class="cert-icon">📊</div>
+          <div>
+            <div class="cert-name">
+              NISM Mutual Fund Distributor — Series 5A
+            </div>
+            <div class="cert-issuer">
+              National Institute of Securities Markets
+            </div>
+          </div>
+        </div>
+        <div class="cert-item reveal reveal-delay-1">
+          <div class="cert-icon">🎤</div>
+          <div>
+            <div class="cert-name">Interview Preparation Certification</div>
+            <div class="cert-issuer">Lernx · 2024</div>
+          </div>
+        </div>
+        <div class="cert-item reveal reveal-delay-2">
+          <div class="cert-icon">📋</div>
+          <div>
+            <div class="cert-name">Project Management Fundamentals</div>
+            <div class="cert-issuer">Lernx · 2024</div>
+          </div>
+        </div>
+        <div class="cert-item reveal reveal-delay-3">
+          <div class="cert-icon">🤖</div>
+          <div>
+            <div class="cert-name">Generative AI Workshop</div>
+            <div class="cert-issuer">Degree2Destiny · 2024</div>
+          </div>
+        </div>
+        <div class="cert-item reveal">
+          <div class="cert-icon">👩‍🏫</div>
+          <div>
+            <div class="cert-name">Nursery Teachers Training</div>
+            <div class="cert-issuer">S.N. Sen Institute · 2018–2019</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section id="achievements">
+      <span class="section-label reveal">Recognition &amp; activities</span>
+      <h2 class="ach-heading reveal">Co-curricular achievements</h2>
+      <div class="ach-grid">
+        <div class="ach-item reveal">
+          <div class="ach-title">Employability Enhancement Program</div>
+          <div class="ach-detail">
+            Axis Institute (Centum Foundation, Infosys Foundation) · April 2025
+            — Selected for the Skill Up initiative focused on career and job
+            readiness for the next generation of professionals.
+          </div>
+        </div>
+        <div class="ach-item reveal reveal-delay-1">
+          <div class="ach-title">Caseathon Participant</div>
+          <div class="ach-detail">
+            Axis Institute of Planning &amp; Management · 2024 — Competed in a
+            business case study competition, applying analytical and strategic
+            thinking to real-world business challenges.
+          </div>
+        </div>
+        <div class="ach-item reveal reveal-delay-2">
+          <div class="ach-title">International Conference Participant</div>
+          <div class="ach-detail">
+            "How to Make India a 3 Trillion Economy" — PSIT · 2023 — Represented
+            the institution at an international academic conference exploring
+            macroeconomic strategy and policy development.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <span class="section-label">Get in touch</span>
+      <h2 class="contact-heading">Let's build something<br />great together</h2>
+      <p class="contact-sub">
+        I'm open to HR roles, talent acquisition opportunities, and people
+        operations positions across Noida, Delhi-NCR, and remote environments.
+      </p>
+      <div class="contact-links">
+        <a href="mailto:areebak1920@gmail.com" class="contact-link primary">
+          <span class="contact-icon">✉️</span> areebak1920@gmail.com
+        </a>
+        <a href="tel:+917348470827" class="contact-link">
+          <span class="contact-icon">📞</span> +91 73484 70827
+        </a>
+        <a href="#" class="contact-link">
+          <span class="contact-icon">💼</span> LinkedIn — Add your URL
+        </a>
+        <a href="#" class="contact-link">
+          <span class="contact-icon">📄</span> Download Resume
+        </a>
+      </div>
+      <p class="footer-note">
+        © 2025 Areeba Fakhar Khan · Noida, Uttar Pradesh · Open to HR &amp;
+        People Operations opportunities
+      </p>
+    </section>
+
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12 },
+      );
+
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>
